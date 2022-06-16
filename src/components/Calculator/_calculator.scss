@@ -1,0 +1,102 @@
+$breakpoint-phone: 600px;
+.Main {
+  @media (max-width: $breakpoint-phone) {
+    background-color: #21d4fd;
+    background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+  }
+  background-color: #fa8bff;
+  background-image: linear-gradient(
+    45deg,
+    #fa8bff 0%,
+    #2bd2ff 52%,
+    #2bff88 90%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  .titleCalculate{
+    @media (max-width: $breakpoint-phone) {
+      color: #fff;
+    }
+    font-size: 42px;
+    color: crimson;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 30px;
+  }
+  .Calculator {
+    @media (max-width: $breakpoint-phone) {
+      width: 95%;
+      outline: 2px solid #fff;
+    }
+    border-radius: 20px;
+    outline: 6px solid #fff;
+    width: 40%;
+    height: 70vh;
+    .result {
+      background-color: #101116;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      height: 20vh;
+      form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        input {
+          background-color: transparent;
+          border: none;
+          height: 30%;
+          width: 100%;
+          color: dodgerblue;
+          caret-color: #fff;
+          text-align: end;
+          border-bottom: 1px solid gray;
+          padding: 0 30px 10px 0;
+          font-size: 22px;
+          &:focus {
+            outline: none;
+            border-bottom: 1px solid gray;
+          }
+        }
+      }
+    }
+    .calculateNumbers {
+      background-color: #101116;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      height: 50vh;
+      display: grid;
+      grid-template-areas:
+        "a a b c"
+        "d e f g";
+      gap: 10px;
+      padding: 10px;
+      button {
+        background-color: #262834;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        &:nth-child(1) {
+          grid-column-start: 1;
+          grid-column-end: 3;
+        }
+        &:last-child {
+          grid-column-start: 3;
+          grid-column-end: 5;
+        }
+      }
+      button.difColor {
+        background-color: #56cbdb;
+      }
+      button.difColor.black {
+        color: #000;
+      }
+    }
+  }
+}
