@@ -16,7 +16,7 @@ function Calculator() {
   };
   const calculate = () => {
     try {
-      setResult(eval(result).toString());
+      // setResult(eval(result).toString());
     } catch {
       setResult("error");
     }
